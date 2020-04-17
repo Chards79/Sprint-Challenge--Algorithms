@@ -3,8 +3,18 @@ Your function should take in a single parameter (a string `word`)
 Your function should return a count of how many occurences of ***"th"*** occur within `word`. Case matters.
 Your function must utilize recursion. It cannot contain any loops.
 '''
+
+
 def count_th(word):
-    
-    # TBC
-    
-    pass
+
+    if word == "":
+        return 0
+    value1 = "th"
+    value2 = count_th(word.lower())
+
+    if value1 not in word:
+        return 0
+    if value1 in value2:
+        return value2.count()
+    else:
+        return 0
