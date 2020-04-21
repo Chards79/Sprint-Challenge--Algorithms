@@ -9,12 +9,9 @@ def count_th(word):
 
     if word == "":
         return 0
-    value1 = "th"
-    value2 = count_th(word.lower())
-
-    if value1 not in word:
-        return 0
-    if value1 in value2:
-        return value2.count()
-    else:
-        return 0
+        
+    th = "th"
+    
+    if th in word:
+        return word.count(th)
+    
